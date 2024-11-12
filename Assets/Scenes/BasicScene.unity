@@ -4020,7 +4020,7 @@ GameObject:
   - component: {fileID: 1079181875}
   - component: {fileID: 1079181874}
   m_Layer: 5
-  m_Name: UIs
+  m_Name: W/L UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
