@@ -6,14 +6,14 @@ public class professorBehaviourWatch : MonoBehaviour
 {
     public float watchStopSeconds = 5f;
     public float watchRotationSpeed = 30f;
+    public GameObject positionTarget;
     private int watchRotationDirection = 1;
     private float resumeTime = -1;
-    private Coroutine timer;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        transform.position = new Vector3(positionTarget.transform.position.x, transform.position.y, positionTarget.transform.position.z);
+        transform.rotation = positionTarget.transform.rotation;
     }
 
     // Update is called once per frame
