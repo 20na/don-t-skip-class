@@ -6,6 +6,7 @@ public class Supedock_Move : MonoBehaviour
 {
 
 public Transform professor;
+//public Transform professorRoom;
 public Transform exitRoom;
 public Transform corner_1;
 public Transform corner_2;
