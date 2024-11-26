@@ -16,8 +16,7 @@ public class Schedule : MonoBehaviour
     private float breakResumeTime;
     private float playtimeResumeTime;
     private int activeIndex = 0;
-    private professorBehaviourWatch currentWatchBehavior;
-    private Supedock_Move currentMoveBehavior;
+    private int previousIndex = 6;
 
     // Start is called before the first frame update
     void Start()
@@ -38,37 +37,40 @@ public class Schedule : MonoBehaviour
         //Play time
         if (Time.time > playtimeResumeTime)
         {
+            Debug.Log("Play time, index " + activeIndex.ToString());
             //play bell sound
             bellSound.Play();
-            //activate activeIndex
+            //activate professors
             professors[activeIndex].SetActive(true);
-            classrooms[activeIndex].SetActive(true);
-            classrooms2[activeIndex].SetActive(true);
-            //activate activeIndex
             professors[activeIndex + 1].SetActive(true);
-            classrooms[activeIndex + 1].SetActive(true);
-            classrooms2[activeIndex + 1].SetActive(true);
+            //deactivate their classrooms
+            classrooms[activeIndex].SetActive(false);
+            classrooms[activeIndex + 1].SetActive(false);
+            //deactivate bonus classrooms
+            classrooms2[activeIndex].SetActive(false);
+            classrooms2[activeIndex + 1].SetActive(false);
+            //reactivate previous prof classrooms
+            classrooms[previousIndex].SetActive(true);
+            classrooms[previousIndex + 1].SetActive(true);
+            //reactivate previous bonus classrooms
+            classrooms2[previousIndex].SetActive(true);
+            classrooms2[previousIndex + 1].SetActive(true);
             //Next time
             playtimeResumeTime = Time.time + playTimeDuration + breakTimeDuration;
 
         }
         else if (Time.time > breakResumeTime)
         {
+            Debug.Log("Break time");
             //play bell sound
             bellSound.Play();
-            //deactivate activeIndex
+            //deactivate professors
             professors[activeIndex].SetActive(false);
-            classrooms[activeIndex].SetActive(false);
-            classrooms2[activeIndex].SetActive(false);
-            //deactivate activeIndex
             professors[activeIndex + 1].SetActive(false);
-            classrooms[activeIndex + 1].SetActive(false);
-            classrooms2[activeIndex + 1].SetActive(false);
             //all the technical stuff
+            previousIndex = activeIndex;
             activeIndex = (activeIndex + 2) % 8;
-            currentWatchBehavior = professors[activeIndex].GetComponent<professorBehaviourWatch>();
-            currentMoveBehavior = professors[activeIndex].GetComponent<Supedock_Move>();
-            breakResumeTime = Time.time + playTimeDuration;
+            breakResumeTime = Time.time + playTimeDuration + breakTimeDuration;
         }
     }
 }
