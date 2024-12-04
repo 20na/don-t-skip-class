@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 56337107}
   - component: {fileID: 56337106}
   - component: {fileID: 56337105}
-  - component: {fileID: 56337104}
+  - component: {fileID: 56337109}
   m_Layer: 0
   m_Name: PhillipBot
   m_TagString: Untagged
@@ -742,30 +742,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 716868369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &56337104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56337102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ce725402ed2084f8306e9ac9935797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  professor: {fileID: 64989038}
-  exitRoom: {fileID: 35266476}
-  corner_1: {fileID: 205839006}
-  corner_2: {fileID: 717701078}
-  corner_3: {fileID: 717701078}
-  corner_4: {fileID: 717701078}
-  corner_5: {fileID: 717701078}
-  corner_6: {fileID: 717701078}
-  corner_7: {fileID: 35266476}
-  speed: 1
-  fullmap: 1
-  teleportDelay: 1
 --- !u!82 &56337105
 AudioSource:
   m_ObjectHideFlags: 0
@@ -933,6 +909,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56337102}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &56337109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56337102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9bfd1a4e2aa8c48951b0843811650e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watchStopSeconds: 5
+  watchRotationSpeed: 30
+  positionTarget: {fileID: 584326443}
 --- !u!4 &64989038 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9215468156872075421, guid: bf8a4db45eaad68428b6d86869dc8cd6, type: 3}
@@ -5868,7 +5859,7 @@ GameObject:
   - component: {fileID: 663278590}
   - component: {fileID: 663278589}
   - component: {fileID: 663278588}
-  - component: {fileID: 663278587}
+  - component: {fileID: 663278592}
   m_Layer: 0
   m_Name: LarkinsBot
   m_TagString: Untagged
@@ -5891,30 +5882,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 716868369}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &663278587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663278585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ce725402ed2084f8306e9ac9935797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  professor: {fileID: 1960390774}
-  exitRoom: {fileID: 816565421}
-  corner_1: {fileID: 1000613140}
-  corner_2: {fileID: 35266476}
-  corner_3: {fileID: 717701078}
-  corner_4: {fileID: 1156008078}
-  corner_5: {fileID: 1584492992}
-  corner_6: {fileID: 205839006}
-  corner_7: {fileID: 535717208}
-  speed: 1
-  fullmap: 1
-  teleportDelay: 15
 --- !u!82 &663278588
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6082,6 +6049,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663278585}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &663278592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663278585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9bfd1a4e2aa8c48951b0843811650e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watchStopSeconds: 5
+  watchRotationSpeed: 30
+  positionTarget: {fileID: 1681410245}
 --- !u!1001 &671460638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8488,7 +8470,7 @@ GameObject:
   - component: {fileID: 1091067341}
   - component: {fileID: 1091067340}
   - component: {fileID: 1091067339}
-  - component: {fileID: 1091067338}
+  - component: {fileID: 1091067343}
   m_Layer: 0
   m_Name: WelshBot
   m_TagString: Untagged
@@ -8511,30 +8493,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 716868369}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1091067338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091067336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ce725402ed2084f8306e9ac9935797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  professor: {fileID: 2054945284}
-  exitRoom: {fileID: 205839006}
-  corner_1: {fileID: 1584492992}
-  corner_2: {fileID: 1156008078}
-  corner_3: {fileID: 717701078}
-  corner_4: {fileID: 35266476}
-  corner_5: {fileID: 1000613140}
-  corner_6: {fileID: 816565421}
-  corner_7: {fileID: 717701078}
-  speed: 1
-  fullmap: 1
-  teleportDelay: 30
 --- !u!82 &1091067339
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8702,6 +8660,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091067336}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1091067343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091067336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9bfd1a4e2aa8c48951b0843811650e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watchStopSeconds: 5
+  watchRotationSpeed: 30
+  positionTarget: {fileID: 1135657170}
 --- !u!1001 &1108268179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10558,7 +10531,7 @@ GameObject:
   - component: {fileID: 1525800697}
   - component: {fileID: 1525800696}
   - component: {fileID: 1525800695}
-  - component: {fileID: 1525800694}
+  - component: {fileID: 1525800699}
   m_Layer: 0
   m_Name: 'CowanBot '
   m_TagString: Untagged
@@ -10581,30 +10554,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 716868369}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1525800694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525800692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ce725402ed2084f8306e9ac9935797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  professor: {fileID: 6904215554167005179}
-  exitRoom: {fileID: 1000613140}
-  corner_1: {fileID: 35266476}
-  corner_2: {fileID: 717701078}
-  corner_3: {fileID: 1156008078}
-  corner_4: {fileID: 1584492992}
-  corner_5: {fileID: 205839006}
-  corner_6: {fileID: 535717208}
-  corner_7: {fileID: 535717208}
-  speed: 1
-  fullmap: 0
-  teleportDelay: 30
 --- !u!82 &1525800695
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10772,6 +10721,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525800692}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1525800699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525800692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9bfd1a4e2aa8c48951b0843811650e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watchStopSeconds: 5
+  watchRotationSpeed: 30
+  positionTarget: {fileID: 1654504279}
 --- !u!1 &1533844967
 GameObject:
   m_ObjectHideFlags: 0
