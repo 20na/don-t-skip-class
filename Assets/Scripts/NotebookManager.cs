@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NotebookManager : MonoBehaviour
 {
-    public Text[] notebookTexts;
-    private int currentNotebookIndex = 0;
+    public TextMeshProUGUI[] notebookTexts;
+    public int currentNotebookIndex = 0;
 
     // Method to handle finding a notebook
     public void AddNotebook(string notebookName)
