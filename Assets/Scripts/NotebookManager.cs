@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class NotebookManager : MonoBehaviour
 {
-    public Text notebookText;
+    public Text[] notebookTexts;
+    private int currentNotebookIndex = 0;
 
-    int total = 0;
-
-    // Start is called before the first frame update
-    void Start()
+    // Method to handle finding a notebook
+    public void AddNotebook(string notebookName)
     {
-        notebookText.text = total.ToString() + " FOUND";
-    }
+        // Ensure we don't exceed the number of Text elements
+        if (currentNotebookIndex < notebookTexts.Length)
+        {
+            // Update the UI for the current notebook
+            notebookTexts[currentNotebookIndex].text = notebookName + " FOUND";
+            notebookTexts[currentNotebookIndex].gameObject.SetActive(true); // Make the Text visible if it was hidden
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            // Move to the next index for the next found notebook
+            currentNotebookIndex++;
+        }
     }
 }
