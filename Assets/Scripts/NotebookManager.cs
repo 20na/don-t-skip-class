@@ -9,18 +9,47 @@ public class NotebookManager : MonoBehaviour
     public TextMeshProUGUI[] notebookTexts;
     public int currentNotebookIndex = 0;
 
-    // Method to handle finding a notebook
-    public void AddNotebook(string notebookName)
+    void Start()
     {
-        // Ensure we don't exceed the number of Text elements
-        if (currentNotebookIndex < notebookTexts.Length)
-        {
-            // Update the UI for the current notebook
-            notebookTexts[currentNotebookIndex].text = notebookName + " FOUND";
-            notebookTexts[currentNotebookIndex].gameObject.SetActive(true); // Make the Text visible if it was hidden
+        ActivateUI(currentNotebookIndex);
+    }
 
-            // Move to the next index for the next found notebook
-            currentNotebookIndex++;
+    void Update()
+    {
+        //if new nottebook  found 
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SwitchUI();
         }
+    }
+
+    public bool IsActiveUIAtIndex(int indexToCheck)
+    {
+        if (indexToCheck >= 0 && indexToCheck < notebookTexts.Length)
+        {
+            return notebookTexts[currentNotebookIndex] == notebookTexts[indexToCheck];
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    void ActivateUI(int index)
+    {
+        foreach (TextMeshProUGUI ui in notebookTexts)
+        {
+            ui.gameObject.SetActive(false);
+        }
+        if (index >= 0 && index < notebookTexts.Length)
+        {
+            notebookTexts[index].gameObject.SetActive(true);
+        }
+    }
+
+    void SwitchUI()
+    {
+        currentNotebookIndex = (currentNotebookIndex + 1) % notebookTexts.Length;
+        ActivateUI(currentNotebookIndex);
     }
 }
