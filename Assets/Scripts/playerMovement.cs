@@ -20,18 +20,23 @@ public class playerMovement : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         //Check if if theres a next notebook
-        if (currentBookIndex < notebooks.Length - 1)
+        if (other.gameObject.CompareTag("Notebook"))
         {
-            //Deactivate current notebook
-            notebooks[currentBookIndex].SetActive(false);
+            if (currentBookIndex < notebooks.Length - 1)
+            {
+                //Deactivate current notebook
+                notebooks[currentBookIndex].SetActive(false);
 
-            //Move to the next notebook
-            currentBookIndex++;
-            notebooks[currentBookIndex].SetActive(true);
+                //Move to the next notebook
+                currentBookIndex++;
+                notebooks[currentBookIndex].SetActive(true);
 
+                //Removing the notebook
+                Destroy(other.gameObject);
+            }
         }
     }
 }

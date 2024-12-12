@@ -17,6 +17,7 @@ public class Schedule : MonoBehaviour
     private float playtimeResumeTime;
     private int activeIndex = 0;
     private int previousIndex = 6;
+    private bool isGameActive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -34,43 +35,57 @@ public class Schedule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Play time
-        if (Time.time > playtimeResumeTime)
+        if (isGameActive)
         {
-            Debug.Log("Play time, index " + activeIndex.ToString());
-            //play bell sound
-            bellSound.Play();
-            //activate professors
-            professors[activeIndex].SetActive(true);
-            professors[activeIndex + 1].SetActive(true);
-            //deactivate their classrooms
-            classrooms[activeIndex].SetActive(false);
-            classrooms[activeIndex + 1].SetActive(false);
-            //deactivate bonus classrooms
-            classrooms2[activeIndex].SetActive(false);
-            classrooms2[activeIndex + 1].SetActive(false);
-            //reactivate previous prof classrooms
-            classrooms[previousIndex].SetActive(true);
-            classrooms[previousIndex + 1].SetActive(true);
-            //reactivate previous bonus classrooms
-            classrooms2[previousIndex].SetActive(true);
-            classrooms2[previousIndex + 1].SetActive(true);
-            //Next time
-            playtimeResumeTime = Time.time + playTimeDuration + breakTimeDuration;
+            //Play time
+            if (Time.time > playtimeResumeTime)
+            {
+                Debug.Log("Play time, index " + activeIndex.ToString());
+                //play bell sound
+                bellSound.Play();
+                //activate professors
+                professors[activeIndex].SetActive(true);
+                professors[activeIndex + 1].SetActive(true);
+                //deactivate their classrooms
+                classrooms[activeIndex].SetActive(false);
+                classrooms[activeIndex + 1].SetActive(false);
+                //deactivate bonus classrooms
+                classrooms2[activeIndex].SetActive(false);
+                classrooms2[activeIndex + 1].SetActive(false);
+                //reactivate previous prof classrooms
+                classrooms[previousIndex].SetActive(true);
+                classrooms[previousIndex + 1].SetActive(true);
+                //reactivate previous bonus classrooms
+                classrooms2[previousIndex].SetActive(true);
+                classrooms2[previousIndex + 1].SetActive(true);
+                //Next time
+                playtimeResumeTime = Time.time + playTimeDuration + breakTimeDuration;
 
+            }
+            else if (Time.time > breakResumeTime)
+            {
+                Debug.Log("Break time");
+                //play bell sound
+                bellSound.Play();
+                //deactivate professors
+                professors[activeIndex].SetActive(false);
+                professors[activeIndex + 1].SetActive(false);
+                //all the technical stuff
+                previousIndex = activeIndex;
+                activeIndex = (activeIndex + 2) % 8;
+                breakResumeTime = Time.time + playTimeDuration + breakTimeDuration;
+            }
         }
-        else if (Time.time > breakResumeTime)
+    }
+
+    public void endGame()
+    {
+        isGameActive = false;
+        //deactivating all profs
+        for (int i = 0; i < professors.Length; i++)
         {
-            Debug.Log("Break time");
-            //play bell sound
-            bellSound.Play();
-            //deactivate professors
-            professors[activeIndex].SetActive(false);
-            professors[activeIndex + 1].SetActive(false);
-            //all the technical stuff
-            previousIndex = activeIndex;
-            activeIndex = (activeIndex + 2) % 8;
-            breakResumeTime = Time.time + playTimeDuration + breakTimeDuration;
+            professors[i].SetActive(false);
+            classrooms[i].SetActive(false);
         }
     }
 }
