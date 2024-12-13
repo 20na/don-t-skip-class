@@ -516,36 +516,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.4015503, z: 1}
   m_Center: {x: 0, y: 0.22839355, z: 0}
---- !u!114 &35125364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35125349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9218aadc1d407f049b1ade081af864c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notebookTexts:
-  - {fileID: 588925209}
-  - {fileID: 1615748392}
-  - {fileID: 924530525}
-  - {fileID: 2137829417}
-  - {fileID: 1733030931}
-  - {fileID: 425932986}
-  - {fileID: 1786368380}
-  - {fileID: 159528874}
-  - {fileID: 228489502}
-  - {fileID: 2130808066}
-  - {fileID: 1193580447}
-  - {fileID: 391825776}
-  - {fileID: 849790914}
-  - {fileID: 73320044}
-  - {fileID: 233226104}
-  - {fileID: 50262330}
-  currentNotebookIndex: 0
 --- !u!1 &35266475
 GameObject:
   m_ObjectHideFlags: 0
@@ -4376,9 +4346,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 35125357}
-    - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 35125364}
+      addedObject: {fileID: 1931378329}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
 --- !u!1001 &454173275
 PrefabInstance:
@@ -15165,6 +15135,41 @@ Transform:
   - {fileID: 1733024299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1931378322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1931378329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931378322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9218aadc1d407f049b1ade081af864c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notebookTexts:
+  - {fileID: 588925209}
+  - {fileID: 1615748392}
+  - {fileID: 924530525}
+  - {fileID: 2137829417}
+  - {fileID: 1733030931}
+  - {fileID: 425932986}
+  - {fileID: 1786368380}
+  - {fileID: 159528874}
+  - {fileID: 228489502}
+  - {fileID: 2130808066}
+  - {fileID: 1193580447}
+  - {fileID: 391825776}
+  - {fileID: 849790914}
+  - {fileID: 73320044}
+  - {fileID: 233226104}
+  - {fileID: 50262330}
+  currentNotebookIndex: 0
 --- !u!1 &1934709810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8313324792718514296, guid: 60d23fbac290247968257206170002fa, type: 3}
