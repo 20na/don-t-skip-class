@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18306622, g: 0.2287434, b: 0.30669293, a: 1}
+  m_IndirectSpecularColor: {r: 0.18306574, g: 0.22874251, b: 0.30669183, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -516,6 +516,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.4015503, z: 1}
   m_Center: {x: 0, y: 0.22839355, z: 0}
+--- !u!114 &35125364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35125349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
 --- !u!1 &35266475
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,9 +787,10 @@ GameObject:
   - component: {fileID: 56337106}
   - component: {fileID: 56337105}
   - component: {fileID: 56337109}
+  - component: {fileID: 56337110}
   m_Layer: 0
   m_Name: PhillipBot
-  m_TagString: Untagged
+  m_TagString: Professor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,6 +993,19 @@ MonoBehaviour:
   watchStopSeconds: 5
   watchRotationSpeed: 30
   positionTarget: {fileID: 584326443}
+--- !u!114 &56337110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56337102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
 --- !u!4 &64989038 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9215468156872075421, guid: bf8a4db45eaad68428b6d86869dc8cd6, type: 3}
@@ -3736,9 +3763,11 @@ GameObject:
   - component: {fileID: 417283199}
   - component: {fileID: 417283198}
   - component: {fileID: 417283197}
+  - component: {fileID: 417283203}
+  - component: {fileID: 417283204}
   m_Layer: 0
   m_Name: SuperdockBot
-  m_TagString: Untagged
+  m_TagString: Professor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3950,6 +3979,39 @@ Transform:
   - {fileID: 558726874}
   m_Father: {fileID: 716868369}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &417283203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417283196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
+--- !u!114 &417283204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417283196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bbf3ad9926cba14bb8039bfc2c50854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  watchStopSeconds: 5
+  watchRotationSpeed: 30
+  classroomDetectorCollider: {fileID: 0}
+  isMoving: 0
+  isWatching: 0
+  isInClass: 1
+  playerDetected: 0
 --- !u!1 &418119247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 87342478889307964, guid: 0f863a2cb13d1da448b252b84acb949e, type: 3}
@@ -4346,6 +4408,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 35125357}
+    - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 35125364}
     - targetCorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1931378329}
@@ -5727,9 +5792,10 @@ GameObject:
   - component: {fileID: 619523253}
   - component: {fileID: 619523252}
   - component: {fileID: 619523251}
+  - component: {fileID: 619523256}
   m_Layer: 0
   m_Name: SandersBot
-  m_TagString: Untagged
+  m_TagString: Professor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5941,6 +6007,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619523249}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &619523256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619523249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
 --- !u!65 &627097286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6415,9 +6494,10 @@ GameObject:
   - component: {fileID: 663278589}
   - component: {fileID: 663278588}
   - component: {fileID: 663278592}
+  - component: {fileID: 663278593}
   m_Layer: 0
   m_Name: LarkinsBot
-  m_TagString: Untagged
+  m_TagString: Professor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6620,6 +6700,19 @@ MonoBehaviour:
   watchStopSeconds: 5
   watchRotationSpeed: 30
   positionTarget: {fileID: 1681410245}
+--- !u!114 &663278593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663278585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
 --- !u!1 &667912513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2597598041158235715, guid: 056e3b14e3b574f6f9e7475e279d60aa, type: 3}
@@ -9287,9 +9380,10 @@ GameObject:
   - component: {fileID: 1091067340}
   - component: {fileID: 1091067339}
   - component: {fileID: 1091067343}
+  - component: {fileID: 1091067344}
   m_Layer: 0
   m_Name: WelshBot
-  m_TagString: Untagged
+  m_TagString: Professor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9492,6 +9586,19 @@ MonoBehaviour:
   watchStopSeconds: 5
   watchRotationSpeed: 30
   positionTarget: {fileID: 1135657170}
+--- !u!114 &1091067344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091067336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
 --- !u!1 &1104437128 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 20a2100985022e94da9960c7ad02d896, type: 3}
@@ -10959,9 +11066,10 @@ GameObject:
   - component: {fileID: 1460256937}
   - component: {fileID: 1460256936}
   - component: {fileID: 1460256935}
+  - component: {fileID: 1460256940}
   m_Layer: 0
   m_Name: KugeleBot
-  m_TagString: Untagged
+  m_TagString: Professor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11173,6 +11281,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460256933}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1460256940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460256933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
 --- !u!1001 &1487509969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11370,9 +11491,10 @@ GameObject:
   - component: {fileID: 1525800696}
   - component: {fileID: 1525800695}
   - component: {fileID: 1525800699}
+  - component: {fileID: 1525800700}
   m_Layer: 0
   m_Name: 'CowanBot '
-  m_TagString: Untagged
+  m_TagString: Professor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11575,6 +11697,19 @@ MonoBehaviour:
   watchStopSeconds: 5
   watchRotationSpeed: 30
   positionTarget: {fileID: 1654504279}
+--- !u!114 &1525800700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525800692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
 --- !u!1 &1533844967
 GameObject:
   m_ObjectHideFlags: 0
@@ -13442,9 +13577,10 @@ GameObject:
   - component: {fileID: 1770204767}
   - component: {fileID: 1770204766}
   - component: {fileID: 1770204765}
+  - component: {fileID: 1770204770}
   m_Layer: 0
   m_Name: KirlinBot
-  m_TagString: Untagged
+  m_TagString: Professor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13656,6 +13792,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770204763}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1770204770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770204763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fa7c3fd37a2d1438269efbaa99f9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 25408236}
 --- !u!65 &1773111247
 BoxCollider:
   m_ObjectHideFlags: 0
