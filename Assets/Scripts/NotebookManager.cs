@@ -16,13 +16,14 @@ public class NotebookManager : MonoBehaviour
 
     void Update()
     {
-        //if new nottebook  found 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
+       
+    }
+
+    public void OnTriggerEnter(Collider other){
+        if (other.gameObject.CompareTag("Notebook")){
             SwitchUI();
         }
     }
-
     public bool IsActiveUIAtIndex(int indexToCheck)
     {
         if (indexToCheck >= 0 && indexToCheck < notebookTexts.Length)
