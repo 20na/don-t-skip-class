@@ -32,6 +32,7 @@ public bool fullmap;
          {
          if (exitRoom != null){
             Invoke("Teleport", teleportDelay);
+            
            // Invoke("walktoPoint1", moveDelay);
             //StartCoroutine("walktoPoint1");
            
@@ -42,16 +43,16 @@ public bool fullmap;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+   // void Update()
+    //{
         
-    }
+  //  }
 
      void Teleport(){
        // yield return new WaitForSeconds(teleportDelay);
 
         transform.position= exitRoom.position;
-       // Debug.Log("teleport");
+        Debug.Log("teleport");
         StartCoroutine("walktoPoint1");
       
         
