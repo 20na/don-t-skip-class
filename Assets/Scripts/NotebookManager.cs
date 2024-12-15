@@ -6,7 +6,7 @@ using TMPro;
 
 public class NotebookManager : MonoBehaviour
 {
-    public TextMeshProUGUI[] notebookTexts;
+    public TextMeshPro[] notebookTexts;
     public int currentNotebookIndex = 0;
 
     void Start()
@@ -38,7 +38,7 @@ public class NotebookManager : MonoBehaviour
 
     void ActivateUI(int index)
     {
-        foreach (TextMeshProUGUI ui in notebookTexts)
+        foreach (TextMeshPro ui in notebookTexts)
         {
             ui.gameObject.SetActive(false);
         }
