@@ -48,7 +48,7 @@ public class NotebookManager : MonoBehaviour
         }
     }
 
-    void SwitchUI()
+    public void SwitchUI()
     {
         currentNotebookIndex = (currentNotebookIndex + 1) % notebookTexts.Length;
         ActivateUI(currentNotebookIndex);
