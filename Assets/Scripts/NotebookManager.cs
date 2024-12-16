@@ -57,6 +57,10 @@ public class NotebookManager : MonoBehaviour
             notebookTexts[index].gameObject.SetActive(false);
             win.gameObject.SetActive(true);
         }
+        else
+        {
+            win.gameObject.SetActive(false);
+        }
 
         
     }
