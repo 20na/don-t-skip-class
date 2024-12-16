@@ -56,23 +56,6 @@ public class Schedule : MonoBehaviour
                 Debug.Log("Play time, index " + activeIndex.ToString());
                 //play bell sound
                 bellSound.Play();
-                //activate professors
-                //Patrol professor
-                professors[activeIndex].SetActive(true);
-                currentProfessorPatrolScript = professors[activeIndex].GetComponent<Supedock_Move>();
-                currentProfessorPatrolScript.behaviorIsActive = true;
-                //Watch professor
-                professors[activeIndex + 1].SetActive(true);
-                currentProfessorWatchScript = professors[activeIndex + 1].GetComponent<professorBehaviourWatch>();
-                currentProfessorWatchScript.setToPosition();
-                //deactivate their classrooms
-                classrooms[activeIndex].SetActive(false);
-                classrooms[activeIndex + 1].SetActive(false);
-                //deactivate bonus classrooms
-                classrooms2[activeIndex].SetActive(false);
-                professors2[activeIndex].SetActive(false);
-                classrooms2[activeIndex + 1].SetActive(false);
-                professors2[activeIndex + 1].SetActive(false);
                 //reactivate previous prof classrooms
                 classrooms[previousIndex].SetActive(true);
                 professors[previousIndex].SetActive(true);
@@ -91,6 +74,23 @@ public class Schedule : MonoBehaviour
                 professors2[previousIndex + 1].SetActive(true);
                 professors2[previousIndex + 1].transform.position = professorsPositions2[previousIndex + 1];
                 professors2[previousIndex + 1].transform.rotation = professorsRotations2[previousIndex + 1];
+                //activate professors
+                //Patrol professor
+                professors[activeIndex].SetActive(true);
+                currentProfessorPatrolScript = professors[activeIndex].GetComponent<Supedock_Move>();
+                currentProfessorPatrolScript.behaviorIsActive = true;
+                //Watch professor
+                professors[activeIndex + 1].SetActive(true);
+                currentProfessorWatchScript = professors[activeIndex + 1].GetComponent<professorBehaviourWatch>();
+                currentProfessorWatchScript.setToPosition();
+                //deactivate their classrooms
+                classrooms[activeIndex].SetActive(false);
+                classrooms[activeIndex + 1].SetActive(false);
+                //deactivate bonus classrooms
+                classrooms2[activeIndex].SetActive(false);
+                professors2[activeIndex].SetActive(false);
+                classrooms2[activeIndex + 1].SetActive(false);
+                professors2[activeIndex + 1].SetActive(false);
                 //Next time
                 Debug.Log("time change");
                 playtimeResumeTime = Time.time + playTimeDuration + breakTimeDuration;
