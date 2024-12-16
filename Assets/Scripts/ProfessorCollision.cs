@@ -19,6 +19,7 @@ public class ProfessorCollision : MonoBehaviour
     {
         scheduleController = GameObject.Find("ScheduleManager");
         scheduleScript = scheduleController.GetComponent<Schedule>();
+        lose.gameObject.SetActive(false);
     }
 
       public void OnCollisionEnter(Collision collision)
