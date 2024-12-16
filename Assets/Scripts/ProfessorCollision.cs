@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProfessorCollision : MonoBehaviour
 {
-
+    public TextMeshPro lose;
     public GameObject gameOverScreen;
    // public GameObject ProfessorBots;
     private GameObject scheduleController;
@@ -27,8 +27,11 @@ public class ProfessorCollision : MonoBehaviour
             Debug.Log("Contact Professor");
             gameOverScreen.SetActive(true);
             StartCoroutine(Coroutine1());
+            lose.gameObject.SetActive(true);
         //Ending game (deactivating schedule and professors)
             scheduleScript.endGame();
+        } else {
+            lose.gameObject.SetActive(false);
         }
         
         
