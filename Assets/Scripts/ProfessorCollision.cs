@@ -5,16 +5,10 @@ using TMPro;
 
 public class ProfessorCollision : MonoBehaviour
 {
-    public TextMeshPro lose;
-    public GameObject gameOverScreen;
-   // public GameObject ProfessorBots;
-    private GameObject scheduleController;
-    private Schedule scheduleScript;
-    //public GameObject[] Prof;
-    
+    public TextMeshPro lose;                    
+    private GameObject scheduleController;    
+    private Schedule scheduleScript;         
 
-
-    // Start is called before the first frame update
     void Start()
     {
         scheduleController = GameObject.Find("ScheduleManager");
@@ -22,27 +16,32 @@ public class ProfessorCollision : MonoBehaviour
         lose.gameObject.SetActive(false);
     }
 
-      public void OnCollisionEnter(Collision collision)
+    // Detect collision with professors
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Professor collider script collision detected");
-        if(collision.gameObject.CompareTag("Professor")){
-            Debug.Log("Contact Professor");
-            gameOverScreen.SetActive(true);
-            StartCoroutine(Coroutine1());
-            lose.gameObject.SetActive(true);
-        //Ending game (deactivating schedule and professors)
-            scheduleScript.endGame();
-        } else {
-            lose.gameObject.SetActive(false);
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
+
+        // Check if the collided object is a professor
+        if (collision.gameObject.CompareTag("Professor"))
+        {
+            Debug.Log("Collided with Professor!");
+            EndGame();
         }
-        
-        
     }
 
-    IEnumerator Coroutine1()
+    private void EndGame()
+    {
+        lose.gameObject.SetActive(true);
+
+        // Stop the schedule system
+        scheduleScript.endGame();
+        StartCoroutine(HideGameOverScreenAfterDelay());
+    }
+
+    // Coroutine to hide the game over screen after 2 seconds
+    private IEnumerator HideGameOverScreenAfterDelay()
     {
         yield return new WaitForSeconds(2);
         gameOverScreen.SetActive(false);
     }
-
 }
