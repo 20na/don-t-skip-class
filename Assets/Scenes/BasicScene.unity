@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18306622, g: 0.2287434, b: 0.30669293, a: 1}
+  m_IndirectSpecularColor: {r: 0.18306574, g: 0.22874251, b: 0.30669183, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6818,8 +6818,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663278585}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.3, y: 37.55, z: -133.4}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -4.2999563, y: 37.550022, z: -133.39998}
   m_LocalScale: {x: 6, y: 12, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7487,8 +7487,8 @@ Transform:
   - {fileID: 417283202}
   - {fileID: 56337103}
   - {fileID: 1460256934}
-  - {fileID: 1770204764}
   - {fileID: 663278586}
+  - {fileID: 1770204764}
   - {fileID: 619523250}
   - {fileID: 1525800693}
   - {fileID: 1091067337}
@@ -14369,6 +14369,15 @@ MonoBehaviour:
   - {fileID: 69234316}
   - {fileID: 747991404}
   - {fileID: 782404501}
+  professors2:
+  - {fileID: 1091067336}
+  - {fileID: 56337102}
+  - {fileID: 619523249}
+  - {fileID: 1770204763}
+  - {fileID: 417283196}
+  - {fileID: 1525800692}
+  - {fileID: 1460256933}
+  - {fileID: 663278585}
   bellSoundObject: {fileID: 1862645934}
 --- !u!4 &1606109077
 Transform:
@@ -18088,24 +18097,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notebookTexts:
-  - {fileID: 2082522888}
-  - {fileID: 22671271}
-  - {fileID: 707322828}
-  - {fileID: 763161302}
-  - {fileID: 1441074231}
-  - {fileID: 59051004}
-  - {fileID: 1177042815}
-  - {fileID: 545983811}
-  - {fileID: 3850653}
-  - {fileID: 583853189}
-  - {fileID: 442467167}
-  - {fileID: 1803119893}
-  - {fileID: 1291703605}
-  - {fileID: 827408223}
-  - {fileID: 1756576914}
-  - {fileID: 343308974}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentNotebookIndex: 0
-  win: {fileID: 16133956}
+  win: {fileID: 0}
 --- !u!1 &1934709810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8313324792718514296, guid: 60d23fbac290247968257206170002fa, type: 3}

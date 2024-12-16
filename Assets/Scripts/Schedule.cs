@@ -11,6 +11,7 @@ public class Schedule : MonoBehaviour
     public GameObject[] professors;
     public GameObject[] classrooms;
     public GameObject[] classrooms2;
+    public GameObject[] professors2;
     public GameObject bellSoundObject;
     private AudioSource bellSound;
     private float breakResumeTime;
