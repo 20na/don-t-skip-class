@@ -42,6 +42,5 @@ public class ProfessorCollision : MonoBehaviour
     private IEnumerator HideGameOverScreenAfterDelay()
     {
         yield return new WaitForSeconds(2);
-        gameOverScreen.SetActive(false);
     }
 }
