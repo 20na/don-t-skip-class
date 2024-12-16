@@ -909,6 +909,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 1035847668}
   gameOverScreen: {fileID: 0}
+--- !u!54 &35125371
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35125349}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &35266475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1061,7 @@ GameObject:
   - component: {fileID: 56337105}
   - component: {fileID: 56337109}
   - component: {fileID: 56337110}
+  - component: {fileID: 56337111}
   m_Layer: 0
   m_Name: PhillipBot
   m_TagString: Professor
@@ -1253,6 +1281,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   gameOverScreen: {fileID: 0}
+--- !u!54 &56337111
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56337102}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &59051003
 GameObject:
   m_ObjectHideFlags: 0
@@ -3708,6 +3763,7 @@ GameObject:
   - component: {fileID: 417283197}
   - component: {fileID: 417283203}
   - component: {fileID: 417283204}
+  - component: {fileID: 417283205}
   m_Layer: 0
   m_Name: SuperdockBot
   m_TagString: Professor
@@ -3956,6 +4012,33 @@ MonoBehaviour:
   isWatching: 0
   isInClass: 1
   playerDetected: 0
+--- !u!54 &417283205
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417283196}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &418119247 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 87342478889307964, guid: 0f863a2cb13d1da448b252b84acb949e, type: 3}
@@ -4295,6 +4378,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 35125364}
+    - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 35125371}
     - targetCorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1931378329}
@@ -6083,6 +6169,7 @@ GameObject:
   - component: {fileID: 619523252}
   - component: {fileID: 619523251}
   - component: {fileID: 619523256}
+  - component: {fileID: 619523257}
   m_Layer: 0
   m_Name: SandersBot
   m_TagString: Professor
@@ -6311,6 +6398,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   gameOverScreen: {fileID: 0}
+--- !u!54 &619523257
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619523249}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &627097286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6810,6 +6924,7 @@ GameObject:
   - component: {fileID: 663278588}
   - component: {fileID: 663278592}
   - component: {fileID: 663278593}
+  - component: {fileID: 663278594}
   m_Layer: 0
   m_Name: LarkinsBot
   m_TagString: Professor
@@ -7029,6 +7144,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   gameOverScreen: {fileID: 0}
+--- !u!54 &663278594
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663278585}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &667912513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2597598041158235715, guid: 056e3b14e3b574f6f9e7475e279d60aa, type: 3}
@@ -10973,6 +11115,7 @@ GameObject:
   - component: {fileID: 1091067339}
   - component: {fileID: 1091067343}
   - component: {fileID: 1091067344}
+  - component: {fileID: 1091067345}
   m_Layer: 0
   m_Name: WelshBot
   m_TagString: Professor
@@ -11192,6 +11335,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   gameOverScreen: {fileID: 0}
+--- !u!54 &1091067345
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091067336}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1104437128 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 20a2100985022e94da9960c7ad02d896, type: 3}
@@ -13288,6 +13458,7 @@ GameObject:
   - component: {fileID: 1460256936}
   - component: {fileID: 1460256935}
   - component: {fileID: 1460256940}
+  - component: {fileID: 1460256941}
   m_Layer: 0
   m_Name: KugeleBot
   m_TagString: Professor
@@ -13516,6 +13687,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   gameOverScreen: {fileID: 0}
+--- !u!54 &1460256941
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460256933}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1487509969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13714,6 +13912,7 @@ GameObject:
   - component: {fileID: 1525800695}
   - component: {fileID: 1525800699}
   - component: {fileID: 1525800700}
+  - component: {fileID: 1525800701}
   m_Layer: 0
   m_Name: 'CowanBot '
   m_TagString: Professor
@@ -13933,6 +14132,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   gameOverScreen: {fileID: 0}
+--- !u!54 &1525800701
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525800692}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1533844967
 GameObject:
   m_ObjectHideFlags: 0
@@ -16266,6 +16492,7 @@ GameObject:
   - component: {fileID: 1770204766}
   - component: {fileID: 1770204765}
   - component: {fileID: 1770204770}
+  - component: {fileID: 1770204771}
   m_Layer: 0
   m_Name: KirlinBot
   m_TagString: Professor
@@ -16494,6 +16721,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lose: {fileID: 0}
   gameOverScreen: {fileID: 0}
+--- !u!54 &1770204771
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770204763}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &1773111247
 BoxCollider:
   m_ObjectHideFlags: 0
