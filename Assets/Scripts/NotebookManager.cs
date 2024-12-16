@@ -8,10 +8,12 @@ public class NotebookManager : MonoBehaviour
 {
     public TextMeshPro[] notebookTexts;
     public int currentNotebookIndex = 0;
+    public TextMeshPro win;
 
     void Start()
     {
         ActivateUI(currentNotebookIndex);
+      
     }
 
     void Update()
@@ -45,7 +47,18 @@ public class NotebookManager : MonoBehaviour
         if (index >= 0 && index < notebookTexts.Length)
         {
             notebookTexts[index].gameObject.SetActive(true);
+        } else 
+        {
+            notebookTexts[index].gameObject.SetActive(false);
+       
         }
+        if (index == 15)
+        {
+            notebookTexts[index].gameObject.SetActive(false);
+            win.gameObject.SetActive(true);
+        }
+
+        
     }
 
     public void SwitchUI()
