@@ -15,33 +15,30 @@ public Transform corner_4;
 public Transform corner_5;
 public Transform corner_6;
 public Transform corner_7;
-
-
 public float speed; 
 public bool fullmap;
+public float teleportDelay = 5f;
+public bool behaviorIsActive = false;
 
- 
-
- public float teleportDelay = 5f; 
  // public float moveDelay = 5f; 
     // Start is called before the first frame update
     void Start()
     {
-         if (exitRoom != null){
-            Invoke("Teleport", teleportDelay);
+         
            // Invoke("walktoPoint1", moveDelay);
             //StartCoroutine("walktoPoint1");
            
-        }
-
-        
-        
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (exitRoom != null && behaviorIsActive)
+        {
+            behaviorIsActive = false;
+            Invoke("Teleport", teleportDelay);
+        }
     }
 
     void Teleport(){
