@@ -18,6 +18,10 @@ public class Schedule : MonoBehaviour
     private int activeIndex = 0;
     private int previousIndex = 6;
     private bool isGameActive = true;
+    private Vector3[] professorsPositions;
+    private Quaternion[] professorsRotations;
+    private professorBehaviourWatch currentProfessorWatchScript;
+    private Supedock_Move currentProfessorPatrolScript;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,8 @@ public class Schedule : MonoBehaviour
         breakResumeTime = startTimeDuration + playTimeDuration;
         for (int i = 0; i < professors.Length; i ++)
         {
+            professorsPositions[i] = professors[i].transform.position;
+            professorsRotations[i] = professors[i].transform.rotation;
             professors[i].SetActive(false);
             classrooms[i].SetActive(true);
         }
@@ -44,8 +50,13 @@ public class Schedule : MonoBehaviour
                 //play bell sound
                 bellSound.Play();
                 //activate professors
+                //Patrol professor
                 professors[activeIndex].SetActive(true);
+                currentProfessorPatrolScript = professors[activeIndex + 1].GetComponent<Supedock_Move>();
+                //Watch professor
                 professors[activeIndex + 1].SetActive(true);
+                currentProfessorWatchScript = professors[activeIndex + 1].GetComponent<professorBehaviourWatch>();
+                currentProfessorWatchScript.setToPosition();
                 //deactivate their classrooms
                 classrooms[activeIndex].SetActive(false);
                 classrooms[activeIndex + 1].SetActive(false);
